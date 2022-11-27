@@ -1,0 +1,115 @@
+.jobApplicationMainPage {
+  position: relative;
+  top: 100px;
+}
+.jobApplicationCard {
+  
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  padding: 30px;
+  background-color: white;
+ 
+}
+.jobApplication{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+    border-top: 5PX #3a3b3d SOLID ;
+    background-color: white;
+    border-radius: 5px;
+  margin-bottom: 100px;
+}
+.profilePicture img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+.profilePicture button {
+  background-color: #3a3b3d;
+  border: none;
+  width: 200px;
+  height: 35px;
+  font-size: 8px;
+  font-size: 14px;
+  text-align: center;
+  color:white;
+  transition: 500ms;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: auto;
+  font-weight: 600;
+}
+
+.profilePicture button:hover {
+  background-color: #3a3b3dd1;
+  border: none;
+  border-radius: 5px;
+}
+.profilePicture {
+  grid-column: 1/5;
+  border-right: 1px solid rgba(205, 202, 202, 0.743);
+  margin-right: 50px;
+}
+.personalInfo {
+  grid-column: 5/8;
+}
+
+.professionalInfo {
+  grid-column: 8/11;
+}
+.educationallInfo {
+  grid-column: 8/11;
+}
+
+.CvInfo {
+  grid-column: 8/11;
+}
+
+.jobDetailsMainPage {
+  position: relative;
+  top: 100px;
+}
+.jobCardDetailsApplied {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+.companyLogoCardDetails {
+  margin-left: 25px;
+  margin-right: auto;
+  width: 200px;
+  margin-bottom: 20px;
+}
+.generalInfoApplied {
+
+  grid-column: 1/11;
+  line-height: 0.8rem;
+  padding-left: 5px;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+.generalInfoApplied div {
+  margin-bottom: 20px;;
+  padding-bottom: 10px;
+}
+.jobDetailsInfoApplied {
+  grid-column: 1/11;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.generalInfoApplied p {
+  margin-bottom: 0px;
+}
+.additionalInfoApplied {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+}

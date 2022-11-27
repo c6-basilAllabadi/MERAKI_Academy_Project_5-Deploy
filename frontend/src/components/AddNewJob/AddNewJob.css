@@ -1,0 +1,67 @@
+.AddNewJob{
+    position: relative;
+    top: 100px;
+    margin-bottom: 200px;
+}
+
+.infoContainerAddNewJob {
+  border-top: 5PX #3a3b3d SOLID ;
+  border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    background-color:white;
+   
+    padding:50px;
+  }
+  .infoContainerAddNewJob input {
+    width: 400px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(75, 75, 75);
+    margin-left: 20px;
+  }
+  .infoContainerAddNewJob button {
+    background-color: #3a3b3d;
+    border:none;
+    width: 170px;
+    height: 35px;
+    font-size: 8px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    transition: 500ms;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    color:white;
+  }
+  .infoContainerAddNewJob button:hover {
+    background-color: #3a3b3dd1;
+    border: none;
+border-radius: 5px;
+    color: white;
+  cursor: pointer;
+  }
+  
+.popuptry{
+  margin-left: auto;
+  margin-right:auto;
+}
+  
+.infoContainerAddNewJob select {
+  width: 410px;
+  height: 35px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: rgba(75, 75, 75, 0.737);
+  font-size: 16px;
+  font-weight: 600;
+}

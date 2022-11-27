@@ -1,0 +1,29 @@
+.search_input input{
+    width:200px;
+    height: 30px;
+    margin-top: 15px;
+}
+.search_input button{
+    display: flex;
+    flex-direction: row;
+    width:30px;
+    height: 45px;
+    text-align: center;
+    background: none;
+    justify-content: center;
+    color:white;
+    margin-top: 35px;
+}
+.search_input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.search_input button:hover{
+    cursor: pointer;
+}
+.search_input input:focus{
+    outline:none;
+}

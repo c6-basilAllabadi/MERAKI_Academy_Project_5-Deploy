@@ -1,0 +1,38 @@
+.companies_navbar{
+  margin-top:-10px;
+  position: fixed;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    width: 100vw;
+    background-color: #3a3b3d;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+  margin-left: -10px;
+  margin-right: -10px;
+    }
+    .companies_navbar p:hover{
+      text-decoration: underline white 4px solid;
+      text-underline-offset: 15px;
+   
+    }
+
+    .search_navbar *{
+      height: 30px;
+      font-weight: 600;
+      color:rgba(7, 7, 93, 0.856);
+      border-radius: 5px;
+      border:none;
+      margin-top: 5px;
+  
+  
+  }

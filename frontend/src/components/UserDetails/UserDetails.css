@@ -1,0 +1,265 @@
+.userDetailsMainDiv1 {
+  position: relative;
+  top: 100px;
+  color:rgb(82, 79, 79)
+}
+.userDetailsCard1 {
+  border-top: 5PX #3a3b3d SOLID ;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  background-color: white;
+
+  padding: 30px;
+  margin-bottom: 100px;
+  
+}
+.updateSectionDetailsUser1 {
+  border-top: 5PX #3a3b3d solid;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+  flex-wrap: wrap;
+  background-color: white;
+
+  padding:50px;
+  border-radius: 5px;
+}
+.updateSectionDetailsUser1 input {
+  width: 400px;
+  height: 30px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(75, 75, 75);
+}
+.updateSectionDetailsUser1 input:focus {
+  color: rgb(75, 75, 75);
+}
+.updateSectionDetailsUser1 button{
+  background-color:#3a3b3d;
+  border:none;
+  border-radius: 5px;
+  width: 170px;
+  height: 35px;
+  font-size: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  transition: 500ms;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+}
+.updateSectionDetailsUser1 select{
+  width: 410px;
+  height: 35px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(75, 75, 75, 0.737);
+}
+.updateSectionDetailsUser1 button:hover {
+  background-color: #3a3b3dd1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.updateSectionDetailsUser1 div{width: 410px;
+  height: 35px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(75, 75, 75, 0.737);}
+
+  
+.profilePicture img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+.profilePicture button {
+  background-color: #3a3b3d;
+  width: 200px;
+  height: 35px;
+  font-size: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(107, 104, 104);
+  transition: 500ms;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: auto;
+}
+
+.profilePicture button:hover {
+  background-color: #3a3b3dd1;
+  border: none;
+  border-radius: 5px;
+  
+}
+.profilePicture {
+  grid-column: 1/5;
+  border-right:1px solid rgba(205, 202, 202, 0.743);
+  margin-right:50px;
+ 
+}
+.personalInfo {
+ 
+  grid-column: 5/8;
+}
+
+.professionalInfo {
+  grid-column: 8/11;
+}
+.educationallInfo {
+  grid-column: 8/11;
+}
+
+.CvInfo {
+  grid-column: 8/11;
+}
+
+@media only screen and (max-width: 600px) {
+  .userDetailsMainDiv1 {
+    position: relative;
+    top: 0px;
+    color:rgb(82, 79, 79)
+  }
+  .userDetailsCard1 {
+    border-top: 5PX #3a3b3d SOLID ;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 88vw;
+
+    display: flex;
+flex-direction: column;
+    background-color: white;
+  
+    padding: 0;
+    padding-left: 30px;
+
+    margin-bottom: 100px;
+    
+  }
+  .updateSectionDetailsUser1 {
+    border-top: 5PX #3a3b3d solid;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+
+    display: flex;
+flex-direction: column;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    background-color: white;
+  
+    padding: 0;
+    padding-left: 30px;
+
+    border-radius: 5px;
+  }
+  .updateSectionDetailsUser1 input {
+    width: 88vw;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(75, 75, 75);
+  }
+  .updateSectionDetailsUser1 input:focus {
+    color: rgb(75, 75, 75);
+  }
+  .updateSectionDetailsUser1 button{
+    background-color:#3a3b3d;
+    border:none;
+    border-radius: 5px;
+    width: 170px;
+    height: 25px;
+    font-size: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: 500ms;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+  }
+  .updateSectionDetailsUser1 select{
+    width: 88vw;
+    height: 25px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(75, 75, 75, 0.737);
+  }
+  .updateSectionDetailsUser1 button:hover {
+    background-color: #3a3b3dd1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .profilePicture img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  .profilePicture button {
+    background-color: #3a3b3d;
+    width: 200px;
+    height: 35px;
+    font-size: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(107, 104, 104);
+    transition: 500ms;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: auto;
+  }
+  
+  .profilePicture button:hover {
+    background-color: #3a3b3dd1;
+    border: none;
+    border-radius: 5px;
+    
+  }
+  .profilePicture {
+    grid-column: 1/5;
+    border-right:1px solid rgba(205, 202, 202, 0.743);
+    margin-right:50px;
+    margin-top: 30px;
+   
+  }
+  .personalInfo {
+   
+    grid-column: 5/8;
+  }
+  
+  .professionalInfo {
+    grid-column: 8/11;
+  }
+  .educationallInfo {
+    grid-column: 8/11;
+  }
+  
+  .CvInfo {
+    grid-column: 8/11;
+  }
+.updateButton1{
+  margin-bottom: 50px;
+}
+
+}

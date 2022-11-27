@@ -1,0 +1,70 @@
+.jobDetailsMainPage2{
+    position: relative;
+    top: 100px;
+    margin-bottom: 100px;
+}
+.jobCardDetails2{
+  border-top: 5PX #3a3b3d SOLID ;
+  border-radius: 5px;
+    margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 100px;
+  color:rgb(82, 79, 79)
+}
+.companyLogoCardDetails2 {
+    margin-left: 25px;
+    margin-right: auto;
+    width: 200px;
+    margin-bottom: 20px;
+   
+  }
+  .generalInfo {
+    border-right:1px solid rgba(205, 202, 202, 0.743) ;
+    grid-column: 1/4;
+    line-height: 0.8rem;
+    padding-left: 5px;
+  }
+  .generalInfo div{
+    box-shadow: -24px 24px 1px -24px rgb(163, 163, 163);
+    padding-bottom: 10px;
+  }
+  .jobDetailsInfo {
+    grid-column: 4/11;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  .generalInfo p{
+    margin-bottom: 0px;
+  }
+  .additionalInfo{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+column-gap: 30px;
+  }
+  .applyButton2,.addFavCard{
+    background-color: #3a3b3d;
+    border: none;
+    width: 200px;
+    height: 35px;
+    font-size: 8px;
+    font-size: 14px;
+    text-align: center;
+    color:white;
+    transition: 500ms;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: auto;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+ .applyButton2:hover,.addFavCard:hover {
+    background-color: #3a3b3dd1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }

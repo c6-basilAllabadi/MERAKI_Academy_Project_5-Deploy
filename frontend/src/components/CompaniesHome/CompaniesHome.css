@@ -1,0 +1,204 @@
+.companyHomeDiv3 {
+    position: relative;
+    top: 140px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    color:rgb(82, 79, 79);
+  }
+  .IconDiv2{
+    position: fixed;
+    top: 70px;
+    left: 50px;
+    
+    
+}
+.Footer_company{
+  position: relative;
+  grid-column: 1/11;
+  z-index: 2;
+  height: 280px;
+  margin-left: -10px;
+  background-color:#3a3b3d;
+  
+  
+
+}
+.IconDiv2 img{
+  width:300px;
+}
+  .filterNav3 {
+    position: sticky;
+    top: 150px;
+    width: 400px;
+    height: 83vh;
+    grid-column: 1/4;
+    border-right: 1px solid rgba(205, 202, 202, 0.511);
+    margin-top: 0px;
+    margin-left: -10px;
+    padding-right: 15px;
+    margin-bottom: 300px;
+    background-color:#3a3b3d;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    color: white;
+  }
+  .filterNav3 li {
+    list-style-type: none;
+    margin-bottom: 13px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .video3{
+    top: 240px;
+    height: 40vh;
+    display: flex;
+    grid-column: 9/11;
+    margin-top: 150px;
+    position: sticky;
+    right: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 400px;
+    
+  }
+  .createCvButton{
+      grid-column: 6;
+      grid-row: 5;
+      background-color: #3a3b3d;
+      border: none;
+      width:250px;
+      height: 40px;
+      font-size: 18px;
+      text-align: center;
+      color:white;
+      transition: 500ms;
+      font-weight: 600;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+  
+    .createCvButton:hover {
+      background-color: #3a3b3dd1;
+      border: none;
+      border-radius: 2px;
+      color: white;
+      cursor: pointer
+    }
+    
+  
+  .filterNav3 li:hover {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    color: GREY;
+  
+    border-radius: 5px;
+  }
+  .userCard3 {
+    grid-column: 4/8;
+
+   
+  
+  }
+  .userCard3:hover {
+    background-color:rgba(239, 238, 238, 0.734);
+  }
+  .userCard3:first-of-type {
+      border-top: 5PX #3a3b3d SOLID ;
+      border-radius: 5px;
+  }
+  .userCard3{
+    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 25px);
+    border:none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    background-color: white;
+    padding: 15px;
+    transition: 500ms;
+   
+  }
+  
+  .userCard3 img {
+    margin-top:25px;
+    width: 150px;
+    height: 150px;
+  }
+  .usersCardsDiv3{
+    grid-column: 4/8;
+
+
+}
+  .userImageCard3 {
+    grid-column: 1;
+    grid-row: 1/9;
+    margin-right: 15px;
+  }
+  .fullNameCard1:hover {
+    cursor: pointer;
+  }
+
+.fullNameCard1 {
+    grid-column: 2/5;
+    grid-row: 1;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .userjobsdetailingCard1 {
+    grid-column: 2/5;
+    grid-row: 2/4;
+    margin-bottom: 5px;
+    
+    font-size: 15px;
+  }
+ .yearsofexperienceusercard12 {
+    grid-column: 2/5;
+    grid-row: 6;
+    font-size: 13px;
+  }
+  .Majorusercard1{
+    margin-top:5px;
+    grid-column: 2/5;
+    grid-row: 5;
+    font-size: 13px;
+    margin-bottom: 3px;}
+
+    .Languagesusercard1{
+        grid-column: 2/5;
+        grid-row:7;
+        font-size: 12px;
+    }
+
+
+  .addFavCard1 {
+    grid-column: 6;
+    grid-row:8;
+    background-color: #3a3b3d;
+    border: none;
+    width: 170px;
+    height: 35px;
+    font-size: 8px;
+    font-size: 14px;
+    text-align: center;
+    color:white;
+    transition: 500ms;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+  .addFavCard1:hover {
+    background-color: #3a3b3dd1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+  cursor: pointer;}
+  
+
+  
+/* !!-------------------------------------------- MEDIA Query --------------------------------------!! */
+
+@media only screen and (max-width: 600px) {
+
+
+  
+}

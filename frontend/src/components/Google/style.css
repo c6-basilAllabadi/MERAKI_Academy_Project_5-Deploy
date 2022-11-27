@@ -1,0 +1,28 @@
+.googleLogin{
+    position: relative;
+    left:270px;
+    top:280px;
+
+}
+.login_button_google{
+    position: relative;
+    top:10px;
+    left:-270px;
+}
+
+.login_button_google1:hover{
+    background-color: #4090d282;
+    border:none;
+    border-radius: 2px;
+  
+
+}
+
+.login_button_google1{
+    background-color: rgba(237, 237, 237, 0.379);
+    border: 1px solid rgba(205, 202, 202, 0.511);
+    width:100px;
+    height:35px;
+    font-size: 14px;
+    color:rgb(107, 104, 104);
+}
