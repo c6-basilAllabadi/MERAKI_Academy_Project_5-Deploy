@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../RegisterCompanies/RegisterCompanies.css"
 
@@ -14,11 +14,9 @@ const RegisterCompanies = () => {
   const [city, setCity] = useState("");
   const [contactPerson, setContactPerson] = useState(null);
   const [numberOfEmployees, setNumberOfEmployees] = useState(null);
-  var companyLogo1;
 
   const navigate = useNavigate();
 
-  const [role, setRole] = useState("");
 
   const [registeredSucssfully, setRegisteredSucssfully] = useState(false);
 

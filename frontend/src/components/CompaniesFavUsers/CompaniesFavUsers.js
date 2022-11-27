@@ -1,13 +1,13 @@
 import axios from "axios";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setFavUsers,
   deleteFavUsers,
 } from "../Redux/reducers/Companies/companies";
-import { setuserDetailsInCompanyApp,setRelativeUsers,deleteFavUsersId } from "../Redux/reducers/Companies/companies";
+import { setuserDetailsInCompanyApp,deleteFavUsersId } from "../Redux/reducers/Companies/companies";
 import CompaniesNavbar from "../CompaniesNavbar/CompaniesNavbar";
 import "./CompaniesFavUsers.css"
 import Footer from "../Footer/Footer";
@@ -21,7 +21,6 @@ const CompaniesFavUsers = () => {
       token:state.CompaniesAuth.token
     };
   });
-  const [allCompaniesFavUsers, setAllCompaniesFavUsers] = useState("");
 
   const getCompaniesFavUsers = () => {
     axios
@@ -53,14 +52,14 @@ const CompaniesFavUsers = () => {
 
   useEffect(() => {
     getCompaniesFavUsers();
-  }, []);
+  });
   return (
     <>
     <CompaniesNavbar/>
     <div className="companyfavDiv">
    <div className="usersCardsDivcompanyfav">
    {!favUsers.length&& <div className="empety">
-      <img src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
+      <img alt = "empty_jobs" src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
       <h1> Browse Users NOW !</h1>
       <button className="button1" onClick={()=>{navigate('/companies/companieshome')}} > Browse Jobs now!  </button>
       </div>}
@@ -68,7 +67,7 @@ const CompaniesFavUsers = () => {
           favUsers.map((elem, index) => {
             return (
               <div id={elem.id} key={index} className="userCard">
-              <img className="userImageCard" src={elem.userimage}></img>
+              <img alt = "empty_jobs" className="userImageCard" src={elem.userimage}></img>
               <h2 className="fullNameCard" onClick={()=>{
                 dispatch(setuserDetailsInCompanyApp(elem))
                 navigate('/companies/userdetails/companyapp')

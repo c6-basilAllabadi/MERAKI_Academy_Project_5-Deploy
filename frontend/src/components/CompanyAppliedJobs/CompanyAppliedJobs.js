@@ -1,16 +1,14 @@
 import axios from "axios";
 import React from "react";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
-import { setCompanyAppliedJobs,setJobDetails } from "../Redux/reducers/Companies/companies";
+import { setCompanyAppliedJobs } from "../Redux/reducers/Companies/companies";
 import "./CompaniesAppliedJobs.css"
-import Navbar from "../Navbar/Navbar";
 import CompaniesNavbar from "../CompaniesNavbar/CompaniesNavbar";
 import Footer from "../Footer/Footer";
 
 const CompaniesAppliedJobs = () => {
-    const navigate=useNavigate()
   const dispatch = useDispatch();
   const { companyId, companyAppliedJobs } = useSelector((state) => {
     return {
@@ -34,13 +32,13 @@ const CompaniesAppliedJobs = () => {
 
   useEffect(() => {
     getCompaniesAppliedJobs();
-  }, []);
+  });
   return (
     <>
    <CompaniesNavbar/>
       <div className="jobApplicationMainPage">
       {!companyAppliedJobs.length&& <div className="empety">
-      <img src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
+      <img alt = "empty_jobs" src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
       <h1> There is no incoming applications yet</h1>
       
       </div>}
@@ -51,7 +49,7 @@ const CompaniesAppliedJobs = () => {
                  <div className="jobApplicationCard">
     
               <div className="profilePicture">
-                <img src={elem.userimage}></img>
+                <img alt = "empty_jobs" src={elem.userimage}></img>
                 <a href={elem.cv} download target="blank"><button>Download CV</button></a>
               </div>
               <div className="personalInfo">

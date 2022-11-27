@@ -1,11 +1,10 @@
 import axios from "axios";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setuserDetailsInCompanyApp,
-  setRelativeUsers,
 } from "../Redux/reducers/Companies/companies";
 import CompaniesNavbar from "../CompaniesNavbar/CompaniesNavbar";
 import "./CompaniesHome.css";
@@ -80,18 +79,14 @@ const CompaniesHome = () => {
 
   useEffect(() => {
     getAllUsers();
-  }, []);
-  useEffect(() => {
-    {
-      console.log(isLoggedIn);
-    }
-  }, []);
+  });
+  
 
   return (
     <>
       <CompaniesNavbar />
       <div className="IconDiv2">
-<img src="https://res.cloudinary.com/did6jp3bj/image/upload/v1668709233/hire-me-logoSvg_nwibby.svg"></img>
+<img alt = "empty_jobs" src="https://res.cloudinary.com/did6jp3bj/image/upload/v1668709233/hire-me-logoSvg_nwibby.svg"></img>
 </div>
       <div className="companyHomeDiv3">
         <div className="filterNav3">
@@ -109,7 +104,7 @@ const CompaniesHome = () => {
           </button>
           {!allUsers && (
             <div className="empety">
-              <img src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
+              <img alt = "empty_jobs" src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
               <h1> No Relative Users at the moment </h1>
             </div>
           )}
@@ -117,7 +112,7 @@ const CompaniesHome = () => {
             allUsers.map((elem, index) => {
               return (
                 <div id={elem.id} key={index} className="userCard3">
-                  <img className="userImageCard3" src={elem.userimage}></img>
+                  <img  alt = "empty_jobs" className="userImageCard3" src={elem.userimage}></img>
                   <h2
                     className="fullNameCard1"
                     onClick={() => {

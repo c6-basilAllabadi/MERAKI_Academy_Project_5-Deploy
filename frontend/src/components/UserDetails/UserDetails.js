@@ -1,7 +1,6 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserDetails } from "../Redux/reducers/Users/users";
 import UserNavbar from "../UserNavbar/UserNavbar";
@@ -41,7 +40,6 @@ function UserDetails() {
   const [major, setMajor] = useState(null);
   const [educationalInstituteName, setEducationalInstituteName] =
     useState(null);
-  const [cv, setCv] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [fullName, setFullName] = useState(null);
@@ -126,7 +124,7 @@ function UserDetails() {
       <div className="userDetailsMainDiv1">
         <div className="userDetailsCard1">
           <div className="profilePicture">
-            <img src={userDetails.userimage}></img>
+            <img alt = "empty_jobs" src={userDetails.userimage}></img>
             {userDetails.cv && (
               <a href={userDetails.cv} target="blank" download>
                 <button style={{color:"white"}}>Download My CV</button>

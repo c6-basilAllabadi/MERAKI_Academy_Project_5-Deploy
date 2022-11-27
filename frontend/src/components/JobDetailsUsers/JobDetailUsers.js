@@ -1,7 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import UserNavbar from "../UserNavbar/UserNavbar";
 import "../JobDetailsUsers/JobDetailsUsers.css";
@@ -54,7 +52,7 @@ function JobDetailsUsers() {
       <div className="jobDetailsMainPage2">
         <div id={jobDetails.id} key={jobDetails.id} className="jobCardDetails2">
           <div className="generalInfo">
-            <img
+            <img alt = "empty_jobs"
               className="companyLogoCardDetails2"
               src={jobDetails.companylogo}
             ></img>

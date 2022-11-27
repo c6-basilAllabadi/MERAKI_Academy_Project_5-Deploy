@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import CompaniesNavbar from "../CompaniesNavbar/CompaniesNavbar";
@@ -25,7 +23,7 @@ function UserDetailsCompanyApp() {
          <div className="userDetailsMainDiv3">
         <div className="userDetailsCard3">
           <div className="profilePicture">
-            <img src={userDetailsInCompanyApp.userimage}></img>
+            <img alt = "empty_jobs" src={userDetailsInCompanyApp.userimage}></img>
             {userDetailsInCompanyApp.cv && (
               <a href={userDetailsInCompanyApp.cv} target="blank" download>
                 <button style={{color:"white"}}>Download CV</button>

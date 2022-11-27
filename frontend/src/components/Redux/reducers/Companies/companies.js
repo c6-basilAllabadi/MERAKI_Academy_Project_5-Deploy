@@ -26,7 +26,7 @@ const companiesSlice = createSlice({
     },
     deleteFavUsers: (state, action) => {
       state.favUsers = state.favUsers.filter((elem, index) => {
-        return elem.id != action.payload;
+        return elem.id !== action.payload;
       });
     },
     setCompanyJobs: (state, action) => {
@@ -37,14 +37,14 @@ const companiesSlice = createSlice({
     },
     updateJob: (state, action) => {
       state.companyJobs.map((elem, index) => {
-        if (elem.id == action.payload.jobUpdateId) {
-          state.companyJobs.splice(index, 1, action.payload.updatedJob);
+        if (elem.id === action.payload.jobUpdateId) {
+          return state.companyJobs.splice(index, 1, action.payload.updatedJob);
         }
       });
     },
     deleteJobs: (state, action) => {
       state.companyJobs = state.companyJobs.filter((elem, index) => {
-        return elem.id != action.payload;
+        return elem.id !== action.payload;
       });
     },
     setJobDetails: (state, action) => {
@@ -80,7 +80,7 @@ const companiesSlice = createSlice({
     },
     deleteFavUsersId: (state, action) => {
       state.favUsersId = state.favUsersId.filter((elem, index) => {
-        return elem != action.payload;
+        return elem !== action.payload;
       });
     },
   },

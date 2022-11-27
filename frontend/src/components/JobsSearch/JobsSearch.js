@@ -1,12 +1,11 @@
-import react from "react";
-import { useDispatch, useSelector } from "react-redux";
 
+import { useDispatch} from "react-redux";
 import axios from "axios";
 import "./JobsSearch.css";
-import { Navigate, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { setAllJobs, setJobDetails } from "../Redux/reducers/Users/users";
-import { setJobSearch } from "../Redux/reducers/Users/users.js";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { setAllJobs} from "../Redux/reducers/Users/users";
+
 
 
 function JobsSearch() {

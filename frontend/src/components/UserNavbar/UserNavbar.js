@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { userContext } from "../../App.js";
-import { useContext } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link, Routes, Route } from "react-router-dom";
-import axios from "axios";
 import { setLogout } from "../Redux/reducers/usersAuth/index";
 import { useDispatch, useSelector } from "react-redux";
 import JobsSearch from "../JobsSearch/JobsSearch.js";
@@ -26,11 +22,7 @@ const UserNavbar = () => {
 
   const navigate = useNavigate();
   const axios = require("axios");
-  useEffect(() => {
-    {
-      console.log(isLoggedIn);
-    }
-  }, []);
+ 
   return (
     <>
       <div className="userNavbar2 navMobile">
@@ -74,7 +66,7 @@ const UserNavbar = () => {
           </p>
         )}</div>
             <div className="complete_account_Navbar">
-            {isLoggedIn && (iscompleted==1)&& (
+            {isLoggedIn && (iscompleted===1)&& (
           <p
             onClick={() => {
               navigate("/users/user/appliedjobs");
@@ -83,7 +75,7 @@ const UserNavbar = () => {
             My Applied Jobs
           </p>
         )}
-        {isLoggedIn && (iscompleted==0)&& (
+        {isLoggedIn && (iscompleted===0)&& (
           <p style={{color:"#eb2f06"}}
             onClick={() => {
               navigate("/users/user/complete");

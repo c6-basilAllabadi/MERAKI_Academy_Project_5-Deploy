@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./CompanyDetailsUsersApp.css"
@@ -27,7 +25,7 @@ function CompanyDetailsUsersApp() {
         <div className="generallInfocompanydetails2">
         
      
-          <img className="companyDetailLogo2" src={companyDetailsInUsersApp.companylogo}></img>
+          <img alt = "empty_jobs" className="companyDetailLogo2" src={companyDetailsInUsersApp.companylogo}></img>
          
           <div>
               <p style={{ fontWeight: "600" }}>Company Name:</p><p>{companyDetailsInUsersApp.companyname}</p></div>

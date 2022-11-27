@@ -12,17 +12,15 @@ import Footer from "../Footer/Footer";
 import { useRef } from "react";
 
 const UserHome = () => {
-  const navRef = useRef();
   const filterRef = useRef();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { userId, allJobs, jobSearch, token,favJobs,favJobsId } = useSelector((state) => {
+  const { userId, allJobs, jobSearch, token,favJobsId } = useSelector((state) => {
     return {
       userId: state.usersAuth.userId,
       allJobs: state.users.allJobs,
       jobSearch: state.users.jobSearch,
       token: state.usersAuth.token,
-      favJobs:state.users.favJobs,
       favJobsId : state.users.favJobsId
     };
   });
@@ -64,13 +62,13 @@ const UserHome = () => {
   };
   useEffect(() => {
     getAllJobs();
-  }, [jobSearch]);
+  });
 
   return (
     <>
       <UserNavbar />
       <div className="IconDiv1">
-        <img src="https://res.cloudinary.com/did6jp3bj/image/upload/v1668709233/hire-me-logoSvg_nwibby.svg"></img>
+        <img  alt = "empty_jobs" src="https://res.cloudinary.com/did6jp3bj/image/upload/v1668709233/hire-me-logoSvg_nwibby.svg"></img>
       </div>
       <div className="userHomeDiv">
         <div className="filterNav2" ref={filterRef}>
@@ -80,7 +78,7 @@ const UserHome = () => {
         <div className="jobsCardsDiv1">
           {!allJobs && (
             <div className="empety">
-              <img src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
+              <img alt = "empty_jobs" src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
               <h1> No Relative Jobs </h1>
             </div>
           )}
@@ -88,7 +86,7 @@ const UserHome = () => {
             allJobs.map((elem, index) => {
               return (
                 <div id={elem.id} key={index} className="jobCard1">
-                  <img
+                  <img alt = "empty_jobs" 
                     className="companyLogoCard1"
                     src={elem.companylogo}
                   ></img>

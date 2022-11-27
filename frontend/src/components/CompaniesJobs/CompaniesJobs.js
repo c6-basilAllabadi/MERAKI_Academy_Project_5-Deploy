@@ -22,6 +22,7 @@ const CompaniesJobs = () => {
       token:state.CompaniesAuth.token
     };
   });
+  
   const [jobTitle, setJobTitle] = useState(null);
   const [expiryDate, setExpiryDate] = useState(null);
   const [jobLocation, setJobLocation] = useState(null);
@@ -52,21 +53,7 @@ const CompaniesJobs = () => {
         console.log(err);
       });
   };
-  const deleteJob = (jobId) => {
-    axios
-      .delete(`https://hire-me-kfab.onrender.com/jobs/${jobId}`,{
-        headers: {
-          authorization: "Bearer " + token,
-        }})
-      .then((result) => {
-        console.log(result);
-        console.log(result.data.result);
-        dispatch(deleteJobs(result.data.result));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  
   const body = {
     jobTitle,
     expiryDate,
@@ -83,11 +70,7 @@ const CompaniesJobs = () => {
     language,
     jobRequirements,
   };
-  const handleUpdateClick = (job) => {
-    setUpdateBox(!updateBox);
-    setJobUpdateId(job.id);
-    if (updateBox) updateJob1(job.id);
-  };
+ 
   const updateJob1 = () => {
     axios
       .put(`https://hire-me-kfab.onrender.com/jobs/${jobUpdateId}`,body,{
@@ -106,7 +89,7 @@ const CompaniesJobs = () => {
   };
   useEffect(() => {
     getCompanyJobs();
-  }, []);
+  });
 
   return (
     <>
@@ -115,13 +98,13 @@ const CompaniesJobs = () => {
       <div className="jobsCardsComapniesDiv">
 
       {!companyJobs.length&& <div className="empety">
-      <img src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
+      <img alt = "empty_jobs" src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
       <h1> Add New Job NOW !</h1>
       </div>}
         {companyJobs && companyJobs.map((elem, index) => {
             return (
               <div id={elem.id} key={index} className="jobCard">
-              <img className="companyLogoCard" src={elem.companylogo}></img>
+              <img alt = "empty_jobs" className="companyLogoCard" src={elem.companylogo}></img>
               <h2 className="jobTitleCard" onClick={()=>{
                 dispatch(setJobDetails(elem))
                 navigate("/companies/jobdetails");

@@ -1,11 +1,9 @@
-import { Routes, Route, Link, useNavigate, useParams } from "react-router-dom";
-import { useEffect, useState, createContext } from "react";
+import { Routes, Route} from "react-router-dom";
 import RegisterCompanies from "../RegisterCompanies/RegisterCompanies";
 import LoginCompanies from "../LoginCompanies/LoginCompanies";
 import CompaniesHome from "../CompaniesHome/Companieshome";
 import CompaniesComplete from "../CompaniesComplete/CompaniesComplete";
 import AddNewJob from "../AddNewJob/AddNewJob";
-import CompaniesNavbar from "../CompaniesNavbar/CompaniesNavbar";
 import CompaniesJobs from "../CompaniesJobs/CompaniesJobs";
 import CompaniesFavUsers from "../CompaniesFavUsers/CompaniesFavUsers";
 import CompanyDetails from "../CompanyDetails/CompanyDetails";

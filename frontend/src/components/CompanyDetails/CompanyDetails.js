@@ -1,10 +1,10 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setCompanyDetails ,setCompanyLogo} from "../Redux/reducers/Companies/companies";
-import UserDetails from "../UserDetails/UserDetails";
+
 import CompaniesNavbar from "../CompaniesNavbar/CompaniesNavbar";
 import "./CompanyDetails.css"
 import Footer from "../Footer/Footer";
@@ -100,7 +100,7 @@ function CompanyDetails() {
         <div className="generallInfocompanydetails2">
         
      
-          <img className="companyDetailLogo2" src={companyDetails.companylogo}></img>
+          <img alt= "empty_cv" className="companyDetailLogo2" src={companyDetails.companylogo}></img>
          
           <div>
               <p style={{ fontWeight: "600" }}>Company Name:</p><p>{companyDetails.companyname}</p></div>

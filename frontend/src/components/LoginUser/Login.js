@@ -1,6 +1,6 @@
-import react from "react";
+
 import jwtDecode from "jwt-decode";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
@@ -19,14 +19,7 @@ import { setUserName ,setImage} from "../Redux/reducers/Messenger/messenger";
 
 import { useRef } from "react";
 const LoginUser = () => {
-  const { userId, allJobs, isLoggedIn } = useSelector((state) => {
-    return {
-      userId: state.usersAuth.userId,
-      allJobs: state.users.allJobs,
-      isLoggedIn: state.usersAuth.isLoggedIn,
-    };
-  });
-
+  
   const login = (decoded1) => {
     axios
       .post("https://hire-me-kfab.onrender.com/login/users/googlelogin", {
@@ -209,7 +202,7 @@ const [googleLogin,setGoogleLogin] = useState(false)
             Dont Have Account! Register Now
           </p>
         
-          {googleLogin && <div > <GoogleOAuthProvider clientId="1051135409617-k2pttkrl0j8jtmh40184b9d1dm3vnetf.apps.googleusercontent.com">
+          googleLogin && <div > <GoogleOAuthProvider clientId="1051135409617-k2pttkrl0j8jtmh40184b9d1dm3vnetf.apps.googleusercontent.com">
                 <GoogleLogin
                   onSuccess={(credentialResponse) => {
                     var decoded1 = jwtDecode(credentialResponse.credential);
@@ -220,14 +213,15 @@ const [googleLogin,setGoogleLogin] = useState(false)
                   }}
                 />
               </GoogleOAuthProvider>
-            </div>||<p
+            </div>
+            <p
             className="googleLink1"
             onClick={() => {
               setGoogleLogin(true)
             }}
           >
             LOGIN WITH GOOGLE
-          </p>}
+          </p>
           
         </div>
       </div>

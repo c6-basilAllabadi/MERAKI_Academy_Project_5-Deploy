@@ -13,21 +13,21 @@ function Footer() {
           
           <div class="middle_box">
 
-            <img class="logo2" src="https://res.cloudinary.com/did6jp3bj/image/upload/v1669058302/hireMeLogoDARKMODE_qshinv.svg" />
+            <img alt = "empty_jobs" class="logo2" src="https://res.cloudinary.com/did6jp3bj/image/upload/v1669058302/hireMeLogoDARKMODE_qshinv.svg" />
           </div>
 
           <div class="right_box">
             <div class="topic">Contact</div><br></br>
             <div class="phone">
-              <a href="#"><i class="fas fa-phone-volume"></i>+962-78-6682097</a><br></br>
-              <a href="#"><i class="fas fa-phone-volume"></i>+962-79-0228491</a><br></br>
+              <p><i class="fas fa-phone-volume"></i>+962-78-6682097</p><br></br>
+              <p><i class="fas fa-phone-volume"></i>+962-79-0228491</p><br></br>
             </div>
             <div class="email">
-              <a href=""><i class="fas fa-envelope"></i> ahmad.h.qadoura@gmail.com</a>
-              <a href=""> basel.labadi@gmail.com</a>
+              <p><i class="fas fa-envelope"></i> ahmad.h.qadoura@gmail.com</p>
+              <p> basel.labadi@gmail.com</p>
             </div>
             <div class="bottom bot">
-              <p>Copyright © 2022 <a href="#"> Basil Labadi ,Ahmad Qadoura </a> All rights reserved</p>
+              <p>Copyright © 2022 <p> Basil Labadi ,Ahmad Qadoura </p> All rights reserved</p>
             </div>
         </div>
      </div>

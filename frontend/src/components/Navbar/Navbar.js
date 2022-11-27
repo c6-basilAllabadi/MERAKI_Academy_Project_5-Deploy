@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+
 import "./style.css";
 
 const Navbar = () => {
-  const dispatch = useDispatch();
-  const { isLoggedIn } = useSelector((state) => {
-    return { isLoggedIn: state.usersAuth.isLoggedIn };
-  });
-
+  
   const navigate = useNavigate();
-  const axios = require("axios");
-
+ 
   return (
     <>
       <div className="navbar_mainpage">
@@ -44,7 +39,7 @@ const Navbar = () => {
               navigate("/users/user/login");
             }}
           >
-            <img src="https://cloudfront.tanqeeb.com/tanqeeb_2020/img/home-icon-2.svg"></img>
+            <img alt = "empty_jobs" src="https://cloudfront.tanqeeb.com/tanqeeb_2020/img/home-icon-2.svg"></img>
             <div className="jobSeekerDivParaghraph">
               <span style={{ fontWeight: 600 }}>Job Seeker?</span>
               <p>
@@ -62,7 +57,7 @@ const Navbar = () => {
               navigate("/companies/companies/login");
             }}
           >
-            <img src="https://cloudfront.tanqeeb.com/tanqeeb_2020/img/home-icon-1.svg"></img>
+            <img alt = "empty_jobs"  src="https://cloudfront.tanqeeb.com/tanqeeb_2020/img/home-icon-1.svg"></img>
             <div className="employerDivPharagraph">
               <span style={{ fontWeight: 600 }}>Employer?</span>
               <p>Hire the perfect talent from many available candidate.</p>

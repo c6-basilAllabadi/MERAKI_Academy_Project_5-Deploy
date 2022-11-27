@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {useState } from "react";
+import { useNavigate} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./UserComplete.css";
 import { setUserPicture, setUserCv ,setUserDetails} from "../Redux/reducers/Users/users";
@@ -19,7 +19,6 @@ const UserComplete = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const [phoneNumber, setPhoneNumber] = useState(null);
   const [maritalStatus, setMaritalStatus] = useState(null);
   const [citizenships, setCitizenships] = useState(null);
   const [whereDoYouLive, setWhereDoYouLive] = useState(null);
@@ -939,9 +938,9 @@ const UserComplete = () => {
           ></input></div>
         
      
-        {registeredSucssfully && (
+        {registeredSucssfully ? (
               <h2 className="registerButtonMessage" >Completed Successfully !</h2>
-          )||<button className="registerButton2"
+          ):<button className="registerButton2"
             onClick={() => {
               handleRegister();
             }}

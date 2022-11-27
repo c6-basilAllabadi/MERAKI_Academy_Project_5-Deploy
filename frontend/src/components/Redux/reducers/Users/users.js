@@ -27,7 +27,7 @@ const usersSlice = createSlice({
     },
     deleteFavJobs: (state, action) => {
       state.favJobs = state.favJobs.filter((elem, index) => {
-        return elem.id != action.payload;
+        return elem.id !== action.payload;
       });
     },
     setAppliedJobs: (state, action) => {
@@ -35,7 +35,7 @@ const usersSlice = createSlice({
     },
     deleteAppliedJobs: (state, action) => {
       state.appliedJobs = state.appliedJobs.filter((elem, index) => {
-        return elem.id != action.payload;
+        return elem.id !== action.payload;
       });
     },
     setJobDetails: (state, action) => {
@@ -68,7 +68,7 @@ const usersSlice = createSlice({
     },
     deleteFavJobsId: (state, action) => {
       state.favJobsId = state.favJobsId.filter((elem, index) => {
-        return elem != action.payload;
+        return elem !== action.payload;
       });
     },
   setAppliedJobsId: (state, action) => {
@@ -79,7 +79,7 @@ const usersSlice = createSlice({
   },
   deleteAppliedJobsId: (state, action) => {
     state.appliedJobsId = state.appliedJobsId.filter((elem, index) => {
-      return elem != action.payload;
+      return elem !== action.payload;
     });
   },}
 });

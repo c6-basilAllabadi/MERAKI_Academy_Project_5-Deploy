@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import UserNavbar from "../UserNavbar/UserNavbar";
@@ -38,7 +38,7 @@ function UserAppliedJobs() {
   };
   useEffect(() => {
     getAppliedJobJobs();
-  }, []);
+  });
 
   const deleteAppliedJob1 = (appliedJobId) => {
     axios
@@ -62,14 +62,14 @@ function UserAppliedJobs() {
        <div className="favHomeDiv1">
       <div className="favjobsCardsDiv1">
       {!appliedJobs.length&& <div className="empety">
-      <img src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
+      <img alt = "empty_jobs" src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
       <h1> Browse Jobs NOW !</h1>
       <button className="button1" onClick={()=>{navigate('/users/userhome')}} > Browse Jobs now!  </button>
       </div>}
         {appliedJobs &&
           appliedJobs.map((elem, index) => { return(
             <div id={elem.id} key={index} className="favjobCard1">
-            <img className="companyLogoCard1" src={elem.companylogo}></img>
+            <img alt = "empty_jobs"  className="companyLogoCard1" src={elem.companylogo}></img>
             <h2 className="jobTitleCard1" onClick={()=>{
               dispatch(setJobDetails(elem))
               navigate('/users/jobdetails')

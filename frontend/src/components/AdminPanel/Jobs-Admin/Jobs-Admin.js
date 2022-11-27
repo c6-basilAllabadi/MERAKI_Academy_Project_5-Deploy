@@ -1,23 +1,18 @@
 import React from 'react'
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {setCompanies ,setJobs,setUsers ,setDeleteCompany ,setDeleteUser,setDeleteJob} from "../../Redux/reducers/Admin/admin"
+import {setDeleteJob} from "../../Redux/reducers/Admin/admin"
 import "./Jobs-admin.css"
 function Jobs() {
 
 
-    const { users ,companies ,jobs} = useSelector((state) => {
+    const {jobs} = useSelector((state) => {
         return {
-            users: state.admin.users,
-            companies : state.admin.companies,
             jobs : state.admin.jobs
     
         };
       });
 
-      const navigate = useNavigate();
       const dispatch =useDispatch()
 
       const deleteJob = (jobId) => {
@@ -77,7 +72,7 @@ function Jobs() {
                       <td> {elem.email} </td>
                       <td> {elem.password} </td>
 
-        {elem.is_deleted==0&& <button onClick={()=>{deleteJob(elem.id)}}>Delete</button> }
+        {elem.is_deleted===0&& <button onClick={()=>{deleteJob(elem.id)}}>Delete</button> }
                     </tr>
 
                   </>

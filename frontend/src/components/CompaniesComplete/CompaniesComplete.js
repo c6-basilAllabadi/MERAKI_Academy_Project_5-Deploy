@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setCompanyDetails, setCompanyLogo } from "../Redux/reducers/Companies/companies";
@@ -137,7 +137,18 @@ const CompaniesComplete = () => {
             setCompanyOverview(e.target.value);
           }}
         />
-
+  <div>
+        <label for="image">Choose Your Company Logo</label>
+          <input
+            id="image"
+            type="file"
+            placeholder="ompany Logoe"
+            className="RegInput"
+            onChange={(e) => {
+              uploadImage(e.target.files[0])
+            }
+            }
+          ></input></div>
 
 <button
           className="registerButton1complete"

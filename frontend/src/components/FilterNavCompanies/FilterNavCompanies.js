@@ -1,12 +1,6 @@
-import react from "react";
+
 import { useDispatch, useSelector } from "react-redux";
-
 import axios from "axios";
-
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { setAllJobs, setJobDetails } from "../Redux/reducers/Users/users";
-import { setJobSearch } from "../Redux/reducers/Users/users.js";
 import { setAllUsers } from "../Redux/reducers/Companies/companies";
 
 function FilterNavCompanies() {

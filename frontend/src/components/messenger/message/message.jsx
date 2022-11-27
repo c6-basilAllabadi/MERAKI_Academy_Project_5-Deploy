@@ -1,13 +1,8 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import "./message.css";
-import { useEffect, useState, useRef } from "react";
 
-import {
-  setMessageList,
-  setMessage,
-} from "../../Redux/reducers/Messenger/messenger";
 
 export default function Message({ message ,own }) {
 
@@ -15,7 +10,6 @@ export default function Message({ message ,own }) {
 
   // const [messageList ,setMessageList] = useState([])
 
-  const dispatch = useDispatch();
 
   //  const [message ,setMessage] = useState("")
   // const [room ,setRoom] = useState("")

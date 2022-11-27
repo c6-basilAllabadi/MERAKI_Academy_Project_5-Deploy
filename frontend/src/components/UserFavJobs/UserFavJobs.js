@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setFav, deleteFav } from "../Redux/reducers/fav/fav";
+import { deleteFav } from "../Redux/reducers/fav/fav";
 import {
   setFavJobs,
   deleteFavJobs,
@@ -45,7 +45,7 @@ export default function UserFavJobs() {
   };
   useEffect(() => {
     getAllFavJobs();
-  }, []);
+  });
 
   const deleteFavJob = (favJobId) => {
     axios
@@ -71,7 +71,7 @@ export default function UserFavJobs() {
         <div className="favjobsCardsDiv1">
           {!allfav && (
             <div className="empety">
-              <img src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
+              <img alt = "empty_jobs" src="https://res.cloudinary.com/dfpuepvtg/image/upload/v1668974149/no_kxgfhk.png" />
               <h1> Browse Jobs NOW !</h1>
               <button
                 className="button1"
@@ -88,7 +88,7 @@ export default function UserFavJobs() {
             favJobs.map((elem, index) => {
               return (
                 <div id={elem.id} key={index} className="favjobCard1">
-                  <img
+                  <img alt = "empty_jobs" 
                     className="companyLogoCard1"
                     src={elem.companylogo}
                   ></img>

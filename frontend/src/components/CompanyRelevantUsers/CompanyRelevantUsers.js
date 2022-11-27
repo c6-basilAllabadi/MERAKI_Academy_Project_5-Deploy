@@ -1,10 +1,5 @@
 import React from 'react'
-import { useDispatch, useSelector } from "react-redux"
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-
-
+import {useSelector } from "react-redux"
 
 function CompanyRelevantUsers() {
 
@@ -13,8 +8,6 @@ function CompanyRelevantUsers() {
             relativeUsers: state.companies.relativeUsers,
         };
       });
-
-    {console.log(relativeUsers)}
 
   return (
 <>

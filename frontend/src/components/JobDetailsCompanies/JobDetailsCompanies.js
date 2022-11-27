@@ -1,11 +1,10 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import CompaniesNavbar from "../CompaniesNavbar/CompaniesNavbar";
 import {
-  setCompanyJobs,
   deleteJobs,
   setJobDetails,
   updateJob,
@@ -109,7 +108,7 @@ function JobDetailsCompanies() {
       <div className="jobDetailsMainPage3">
         <div id={jobDetails.id} key={jobDetails.id} className="jobCardDetails3">
           <div className="generalInfo">
-            <img
+            <img alt = "empty_jobs" 
               className="companyLogoCardDetails3"
               src={jobDetails.companylogo}
             ></img>

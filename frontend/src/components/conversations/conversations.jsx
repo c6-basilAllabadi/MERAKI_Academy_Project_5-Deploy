@@ -3,9 +3,7 @@ import "./conversations.css"
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux"
 import { setCompanyIdUserApp } from '../Redux/reducers/Users/users';
-import { setUserId } from '../Redux/reducers/usersAuth';
 import { useEffect, useState } from "react";
-import {  setCompanyId } from "../Redux/reducers/CompaniesAuth/index";
 import {setUserCoId} from "../Redux/reducers/Companies/companies";
 
 export default function Conversations() {
@@ -76,7 +74,7 @@ else{
   });
 
 }
- }, [])
+ })
 
 
 

@@ -1,15 +1,10 @@
 import { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+
 import Conversations from "../conversations/conversations";
 import UserNavbar from "../UserNavbar/UserNavbar";
 import Message from "./message/message";
 import "./messenger.css";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setMessage,
-  setMessageList,
-  setsocketId
-} from "../Redux/reducers/Messenger/messenger";
 import { io } from "socket.io-client";
 import axios from "axios";
 import CompaniesNavbar from "../CompaniesNavbar/CompaniesNavbar";
@@ -19,17 +14,11 @@ const ENDPOINT = "http://localhost:3001";
 // const socket = io.connect(ENDPOINT);
 
 export default function Messenger() {
-  const [messageList, setMessageList] = useState([]);
   const [message, setMessage] = useState("");
   const [socket, setSocket] = useState(io(ENDPOINT, { autoConnect: false }));
   const scrollRef = useRef();
   const [response1, setResponse1] = useState([]);
 
-
-
-
-
-  const dispatch = useDispatch();
 
   const [empty, setEmpty] = useState(false);
 
@@ -103,7 +92,7 @@ useEffect(() => {
   //-------------------
       socket.emit("JOIN_ROOM", room);
   //-------------------
-}, [])
+})
 
 
 
@@ -134,7 +123,7 @@ useEffect(() => {
     return () => {
       socket.removeAllListeners();
     };
-  }, [response1]);
+  });
 
 //-----------------------------------------
   const sendMessage = () => {
@@ -173,7 +162,7 @@ useEffect(() => {
 
   return (
     <>
-      {userId&&<UserNavbar /> || companyId&& <CompaniesNavbar/>}
+      {userId?<UserNavbar />: companyId&& <CompaniesNavbar/>}
       <div className="messenger">
         <div className="chatMenu">
           <div className="chatMenuWrapper">

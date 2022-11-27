@@ -1,10 +1,8 @@
 import "./App.css";
-import { Routes, Route, Link, useNavigate, useParams } from "react-router-dom";
-import { useEffect, useState, createContext } from "react";
+import { Routes, Route} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import UsersApp from "./components/UsersApp/UsersApp";
 import CompaniesApp from "./components/CompaniesApp/CompaniesApp";
-import UserHome from "./components/UserHome/UserHome";
 import AdminPanel from "./components/AdminPanel/AdminPanel";
 import Messenger from "./components/messenger/messenger";
 

@@ -14,7 +14,7 @@ const FavSlice = createSlice({
       },
       deleteFav: (state, action) => {
      state.fav= state.fav.filter((elem, index) =>{
-          return elem.id != action.payload;
+          return elem.id !== action.payload;
         });
       },
    

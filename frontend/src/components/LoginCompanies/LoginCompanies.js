@@ -1,12 +1,11 @@
-import react from "react";
-import { useEffect, useState } from "react";
+
+import {useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./LoginCompanies.css";
 import { useDispatch, useSelector } from "react-redux"
 import { setLogin, setCompanyId } from "../Redux/reducers/CompaniesAuth/index";
 import { setCompanyDetails, setFavUsers, setFavUsersId } from "../Redux/reducers/Companies/companies";
-import CompanyDetails from "../CompanyDetails/CompanyDetails";
 import { setUserName,setImage } from "../Redux/reducers/Messenger/messenger";
 
 

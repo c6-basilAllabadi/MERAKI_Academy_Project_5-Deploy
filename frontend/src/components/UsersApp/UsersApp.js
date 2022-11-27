@@ -1,11 +1,10 @@
 
-import { Routes, Route, Link , useNavigate ,useParams } from "react-router-dom";
-import {useEffect , useState , createContext} from "react"
+import { Routes, Route, } from "react-router-dom";
 import LoginUser from "../LoginUser/Login";
 import RegisterUser from "../RegisterUser/Register";
 import UserHome from "../UserHome/UserHome";
 import UserComplete from "../UserComplete/UserComplete"
-import UserNavbar from "../UserNavbar/UserNavbar";
+
 import UserFavJobs from "../UserFavJobs/UserFavJobs";
 import UserDetails from "../UserDetails/UserDetails";
 import CompanyDetailsUsersApp from "../CompanyDetailsUsersApp/CompanyDetailsUsersApp";

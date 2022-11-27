@@ -18,17 +18,17 @@ const adminSlice = createSlice({
     },
     setDeleteUser: (state, action) => {
       state.users = state.users.filter((elem, index) => {
-        return elem.id != action.payload;
+        return elem.id !== action.payload;
       });
     },
     setDeleteJob: (state, action) => {
       state.jobs = state.jobs.filter((elem, index) => {
-        return elem.id != action.payload;
+        return elem.id !== action.payload;
       });
     },
     setDeleteCompany: (state, action) => {
         state.companies = state.companies.filter((elem, index) => {
-          return elem.id != action.payload;
+          return elem.id !== action.payload;
         });
       },
   },

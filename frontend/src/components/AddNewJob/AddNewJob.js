@@ -1,8 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { useRef } from "react";
-import { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addJob } from "../Redux/reducers/Companies/companies";
 import "./AddNewJob.css";
@@ -803,7 +803,7 @@ const AddNewJob = () => {
             setJobRequirements(e.target.value);
           }}
         />
-           {success&& <div className="popuptry"><h3> Job Added Successfully !</h3></div>||<button
+           {success?<div className="popuptry"><h3> Job Added Successfully !</h3></div>:<button
           className="AddNewJobButton"
           onClick={() => {
             handleAddNewJob();

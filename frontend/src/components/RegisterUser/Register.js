@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import "./Register.css"
@@ -13,20 +13,6 @@ const RegisterUser = () => {
   const [password, setPassword] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [maritalStatus, setMaritalStatus] = useState("");
-  const [citizenships, setCitizenships] = useState("");
-  const [whereDoYouLive, setWhereDoYouLive] = useState("");
-  const [residencyStatus, setResidencyStatus] = useState("");
-  const [yearsOfExperience, setYearsOfExperience] = useState("");
-  const [recentJobTitle, setRecentJobTitle] = useState("");
-  const [recentJobFunction, setRecentJobFunction] = useState("");
-  const [industryOfRecentJob, setIndustryOfRecentJob] = useState("");
-  const [languages, setLanguages] = useState("");
-  const [skills, setSkills] = useState("");
-  const [educationLevel, setEducationLevel] = useState("");
-  const [major, setMajor] = useState("");
-  const [educationalInstituteName, setEducationalInstituteName] = useState("");
-  const [cv, setCv] = useState("");
 
   const navigate = useNavigate();
 
